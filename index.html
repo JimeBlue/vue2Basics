@@ -13,11 +13,8 @@
       <h1>{{greet("afternoon")}}</h1>
       <p>{{name}}</p>
       <p>{{job}}</p>
-      <!-- EXAMPLE: we bind the variable website the the href attribute. To use it we don´t need curly braces but quotations -->
       <a :href="website">Jime´s GitHub</a><br /><br />
-      <!-- EXAMPLE: we bind the property name the the value attribute. -->
       <input type="text" :value="name" />
-      <!-- EXAMPLE: output the value of the property website tag using the v-html directive -->
       <p v-html="websiteTag"></p>
     </div>
     <script src="app.js"></script>
