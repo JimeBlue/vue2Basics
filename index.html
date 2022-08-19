@@ -11,19 +11,12 @@
 
   <body>
     <div id="vue-app">
-      <!--  EXPLANATION: To add a CLICK event I have to use the directive v:on:click as attribute 
-           of the element I want to add the click event to. The shortcut is @click -->
-      <!-- EXAMPLE: below I´m calling the methods add and substract that are in the data 
-          object of the js file. With the call a pass the value of the years I want to add-->
       <h1>Events</h1>
       <button v-on:click="add(1)">Add a Year</button>
       <button v-on:click="subtract(1)">Subtract a Year</button>
-      <!-- EXAMPLE: ON DOBLE CLICK EVENT. Shortcut @dbclick -->
       <button v-on:dblclick="add(10)">Add 10 Years</button>
       <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
       <p>My age is {{age}}</p>
-      <!-- EXPLANATION: ON MOUSE MOVE EVENT. THE directive is v-on:mousemove. -->
-      <!-- EXAMPLE: on mouse move call the updateXY method -->
       <div id="canvas" v-on:mousemove="updateXY">{{ x }} , {{ y }}</div>
     </div>
     <script src="app.js"></script>
