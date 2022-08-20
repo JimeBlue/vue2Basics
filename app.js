@@ -1,17 +1,11 @@
 new Vue({
   el: "#vue-app",
   data: {
-    available: false,
-    nearby: false,
+    // N°2) Initialize error and success to false
+    error: false,
+    success: false,
   },
 
   methods: {},
-  computed: {
-    compClasses: function () {
-      return {
-        available: this.available,
-        nearby: this.nearby,
-      };
-    },
-  },
+  computed: {},
 });
