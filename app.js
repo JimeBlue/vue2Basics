@@ -1,19 +1,21 @@
 new Vue({
   el: "#vue-app",
   data: {
-    a: 0,
-    b: 0,
-    age: 20,
+    /* N°2) Crate the variable available and set it to false */
+    available: false,
+    /* N°2) Crate the variable nearby and set it to false */
+    nearby: false,
   },
 
+  methods: {},
   computed: {
-    addToA() {
-      console.log("addToA");
-      return this.a + this.age;
-    },
-    addToB() {
-      console.log("addToB");
-      return this.b + this.age;
+    // N°7) This object set the value of the variables available and nearby to the values assigned to that variables
+    // in the data object. It is important to understand that that value changes on click
+    compClasses: function () {
+      return {
+        available: this.available,
+        nearby: this.nearby,
+      };
     },
   },
 });
