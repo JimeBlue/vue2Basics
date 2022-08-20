@@ -10,19 +10,11 @@
   </head>
   <body>
     <div id="vue-app">
-      <!-- bag image -->
-      <!-- bind this div to have the class property so that the class is equal to an object.
-           In the object, the calss burst will be applied when ended is true -->
       <div id="bag" v-bind:class="{burst: ended}"></div>
-      <!-- bag health -->
       <div id="bag-health">
-        <!-- bind the style attribute to have as a value an object with different style properties.
-        The style property will be width. We set width to be the value of health -->
         <div v-bind:style="{width: health + '%'}"></div>
       </div>
-      <!-- game controls -->
       <div id="controls">
-        <!-- call on click the punch function and show this btn when the game is not ended -->
         <button @click="punch" v-show="!ended">Punch</button>
         <button @click="restart">Restart</button>
       </div>
