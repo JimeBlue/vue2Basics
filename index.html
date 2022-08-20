@@ -10,13 +10,22 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Computed Properties</h1>
-      <button v-on:click="a++">Add to A</button>
-      <button v-on:click="b++">Add to B</button>
-      <p>A - {{ a }}</p>
-      <p>B - {{ b }}</p>
-      <p>Age + A = {{ addToA }}</p>
-      <p>Age + B = {{ addToB }}</p>
+      <h1>Dynamic CSS</h1>
+      <h2>Example</h2>
+      <!-- PROBLEM: create a button to toggle the class nearby and 
+      a button to toggle the class available -->
+      <!-- SOLUTION: 
+      N°1) Create a button with an on click event. 
+      On click the variable nearby should have the opposite value -->
+
+      <button v-on:click="nearby = !nearby">Toggle nearby</button>
+      <!-- N°3) Create a button with an on click event. 
+      On click the variable available should have the opposite value -->
+      <button v-on:click="available = !available">Toggle available</button>
+      <!-- N°6) have the div to have the object "compClasses" as value. That object is in computed in js file -->
+      <div v-bind:class="compClasses">
+        <span>Ryu</span>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
