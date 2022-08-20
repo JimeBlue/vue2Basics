@@ -10,14 +10,23 @@
   </head>
 
   <body>
+    <!-- EXPLANATION: event modifieres basically add extra functionalities to events -->
     <div id="vue-app">
       <h1>Events</h1>
-      <button v-on:click="add(1)">Add a Year</button>
+      <!-- EXAMPLE: I add the modifier .once to the on click event so that in only fires once -->
+      <button v-on:click.once="add(1)">Add a Year</button>
       <button v-on:click="subtract(1)">Subtract a Year</button>
       <button v-on:dblclick="add(10)">Add 10 Years</button>
       <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
       <p>My age is {{age}}</p>
       <div id="canvas" v-on:mousemove="updateXY">{{ x }} , {{ y }}</div>
+      <!-- EXAMPLE: I added the .prevent modifier to the on click event to prevent 
+        the deafult behaviour, i.e to prevent going the net ninja page when clickin on the link
+      -->
+      <a @click.prevent="click" href="http://www.thenetninja.co.uk"
+        >The net ninja</a
+      >
+      <!-- EXAMPLE: more event modifiers: https://v2.vuejs.org/v2/guide/events.html#Event-Modifiers -->
     </div>
     <script src="app.js"></script>
   </body>
