@@ -7,18 +7,11 @@ new Vue({
   },
 
   methods: {
-    add(inc) {
-      this.age += inc;
+    logName() {
+      console.log("you enter your name");
     },
-    subtract(dec) {
-      this.age -= dec;
-    },
-    updateXY(event) {
-      this.x = event.offsetX;
-      this.y = event.offsetY;
-    },
-    click() {
-      alert("you clicked me");
+    logAge() {
+      console.log("you enter your age");
     },
   },
 });
