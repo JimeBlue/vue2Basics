@@ -10,10 +10,28 @@
   </head>
   <body>
     <div id="vue-app">
-      <button @click="error = !error">Toggle Error</button>
-      <button @click="success = !success">Toggle Success</button>
-      <p v-if="error">There has been an error</p>
-      <p v-if="success">Success</p>
+      <h1>Looping throung lists</h1>
+      <ul>
+        <!-- OUTPUTTING THE CONTENT OF ARRAYS -->
+        <!-- N°1) In the tag where I want to output the content, add the directive v-for to loop through
+        the array and output the content of each element in it, using (element) in (array) -->
+        <li v-for="character in characters">{{character}}</li>
+      </ul>
+      <ul>
+        <!-- N°2) If I want to also ouptut the index I can also include it as below-->
+        <li v-for="(ninja, index) in ninjas">
+          {{index}} . {{ ninja.name }} - {{ ninja.age }}
+        </li>
+      </ul>
+      <!-- LOOPING AND OUTPUTTING CONTENT OF OBJECT -->
+      <!-- N°1) using the v-for directive loop the array of objects -->
+      <template v-for="ninja in ninjas">
+        <!-- N°2) using the v-for directive cycle through the value and key of object in the array -->
+        <div v-for="(val,key) in ninja">
+          <!-- N°3) Output each key value pair -->
+          <p>{{ key }} - {{ val }}</p>
+        </div>
+      </template>
     </div>
     <script src="app.js"></script>
   </body>
