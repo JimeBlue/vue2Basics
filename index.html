@@ -10,16 +10,21 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Events</h1>
-      <button v-on:click.once="add(1)">Add a Year</button>
-      <button v-on:click="subtract(1)">Subtract a Year</button>
-      <button v-on:dblclick="add(10)">Add 10 Years</button>
-      <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
-      <p>My age is {{age}}</p>
-      <div id="canvas" v-on:mousemove="updateXY">{{ x }} , {{ y }}</div>
-      <a @click.prevent="click" href="http://www.thenetninja.co.uk"
-        >The net ninja</a
-      >
+      <div id="vue-app">
+        <h1>Keyboard Events</h1>
+        <label>Name:</label>
+        <!-- EXAMPLE: I use the directive v-on:keyup for the key up event, which will fire 
+          the function logName. Then i added the .enter modifier so that the function fires only
+        the enter is pressed. This prevents the function firing everytime a letter is introduced
+      in the input field-->
+        <input type="text" v-on:keyup.enter="logName" />
+        <label>Age:</label>
+        <!-- EXAMPLE: I use the directive v-on:keyup for the key up event, which will fire 
+          the function logAge. Then I added the .alt.enter modifiers so that the function fires only
+        when the user press alt and enter-->
+        <input type="text" v-on:keyup.alt.enter="logAge" />
+        <!-- EXAMPLE: more key modifiers: https://v2.vuejs.org/v2/guide/events.html?#Event-Modifiers -->
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
