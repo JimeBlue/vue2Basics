@@ -1,8 +1,6 @@
 new Vue({
   el: "#vue-app",
   data: {
-    /*  EXPLANATION: the values of the variables have to be blank ´cause it´s Vue which fills in and
-    updates the values */
     name: "",
     age: "",
   },
