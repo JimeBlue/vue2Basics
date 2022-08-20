@@ -12,17 +12,9 @@
     <div id="vue-app">
       <h1>Dynamic CSS</h1>
       <h2>Example</h2>
-      <!-- PROBLEM: create a button to toggle the class nearby and 
-      a button to toggle the class available -->
-      <!-- SOLUTION: 
-      N°1) Create a button with an on click event. 
-      On click the variable nearby should have the opposite value -->
 
       <button v-on:click="nearby = !nearby">Toggle nearby</button>
-      <!-- N°3) Create a button with an on click event. 
-      On click the variable available should have the opposite value -->
       <button v-on:click="available = !available">Toggle available</button>
-      <!-- N°6) have the div to have the object "compClasses" as value. That object is in computed in js file -->
       <div v-bind:class="compClasses">
         <span>Ryu</span>
       </div>
