@@ -1,9 +1,10 @@
 new Vue({
   el: "#vue-app",
   data: {
-    age: 25,
-    x: 0,
-    y: 0,
+    /*  EXPLANATION: the values of the variables have to be blank ´cause it´s Vue which fills in and
+    updates the values */
+    name: "",
+    age: "",
   },
 
   methods: {
